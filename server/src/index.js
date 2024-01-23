@@ -7,11 +7,7 @@ import { recipesRouter } from "./controller/recipes-routes.js";
 const app = express();
 
 app.use(express.json());
-app.use(cors(
-  {
-    origin: ["http://localhost:3001", "https://cocktail-mern.onredner.com"],
-  }
-));
+app.use(cors());
 app.use("/auth", userRouter);
 app.use("/recipes", recipesRouter);
 
